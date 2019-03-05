@@ -6,9 +6,13 @@ The resulting dataset was then used to provide insights on the parking habits of
 To have an indication of the parking flux at street level, the sensors were grouped by street location, resulting in 8 categories. Next, for the whole data sourcing period, the number of times the parking status was reported occupied versus free were calculated for each time of day. Finally, the ratio between these frequencies was taken as a proxy of parking availability ranging from 0-1 (free/occupied). 
 
 Furthermore, the total duration cars spend parked at spot is an important attribute that is likely to influence any availability recommendations based on historical data. To get an insight on the total duration a parking spot remained occupied, the following metric was devised:
-For every sensor check whether the occupancy status had status: occupied. If so, store the sensor’s status update time.
-Move to the subsequent record in the dataset and check whether the occupancy  status remains: occupied. If so, move to the next record. If not, calculate the duration between the timestamp of the first occurrence of occupied status and the last occurrence of occupied status. 
-Store the total duration for the date/time of the first occurrence of occupied status.
-Repeat the process.           
-This will produce an indication of high likely it for a parking spot to remain occupied in the future, given the current timestamp. The following figure illustrates the variation of duration of occupancy per day of week and time of day.  
 
+* For every sensor check whether the occupancy status had status: occupied. If so, store the sensor’s status update time.
+* Move to the subsequent record in the dataset and check whether the occupancy  status remains: occupied. If so, move to the next record. If not, calculate the duration between the timestamp of the first occurrence of occupied status and the last occurrence of occupied status. 
+* Store the total duration for the date/time of the first occurrence of occupied status.
+* Repeat the process.           
+
+This will produce an indication of high likely it for a parking spot to remain occupied in the future, given the current timestamp. 
+
+The mongo data are located at 
+smb://fcc.pri/shared/LabAndInnovationTeam/Data Science/Data Sets/Synchronicity Mongo data/
