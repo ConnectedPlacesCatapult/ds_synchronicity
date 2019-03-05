@@ -1,4 +1,4 @@
-# Syncronicity Data Science FCC
+# Synchronicity Data Science FCC
 
 This jupyter notebook was created as part of the Synchronicity project to assist the Impact Assessment team with their analysis. From all soucring data, only the car parking sensors in Santander City Centre with data collected between May and August this year (2018-05-09 to 2018-08-1) were used. The dataset was sourced by placing requests on Santander’s smart parking API (http://datos.santander.es/api/rest/datasets/sensores_smart_parking.json) every minute and storing the dataset in a mongodb database. The API’s response consisted of information such as location of the sensor, a timestamp when the status of the sensor was last updated, the status of the sensor (occupied/free) as well as sensor id. 
 The resulting dataset was then used to provide insights on the parking habits of drivers for the areas where sensors are installed.
